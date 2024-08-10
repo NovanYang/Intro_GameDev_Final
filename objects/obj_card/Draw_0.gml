@@ -42,6 +42,7 @@ if(!face_up) sprite_index = spr_back;
 //draw the card
 draw_sprite(sprite_index, image_index, x, y);
 
+//when the card is selected and wait to cast the spell draw a red lock
 if(lock){
 	draw_sprite(spr_card_lock, 0, x, y);
 }

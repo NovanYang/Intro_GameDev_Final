@@ -1,3 +1,4 @@
+//same thing with obj_card
 draw_self();
 if(obj_card_manager.state == CARD_STATES.CHOOSE_ENEMY && !died){
 	//show_debug_message("loc!");

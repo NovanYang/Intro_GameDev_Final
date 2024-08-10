@@ -1,3 +1,4 @@
+//when enemy property of died set true, delete from enemy list and desotry itself
 if(sprite_index == spr_enemy_died){
 	for(var _i = 0; _i < ds_list_size(obj_game_manager.enemies); _i++){
 		if(ds_list_find_value(obj_game_manager.enemies, _i) == id){

@@ -13,7 +13,9 @@ switch(state){
 		
 	case STATES.ENEMY_GENERATE:
 		//show_debug_message("Generate!");
+		//generate enemy according to current room
 		if(room == rm_level_1){
+			//two enemies created in LEVEL 1
 			var _enemy_one = instance_create_layer(224, -100, "Instances", obj_enemy);
 			_enemy_one.attack_point = 1;
 			_enemy_one.health_point = 3;
@@ -32,11 +34,13 @@ switch(state){
 		}
 		state = STATES.PLAYER_ROUND_INITIAL;
 		break;
-		
+	
+	//start the card states
 	case STATES.PLAYER_ROUND_INITIAL:
 		obj_card_manager.state = CARD_STATES.INITIAL;
 		state = STATES.PLAYER_ROUND;
-		
+	
+	//if all enemies killed in player's round, game win (might need to change that for dot mechanics)
 	case STATES.PLAYER_ROUND:
 		if(ds_list_size(enemies) == 0){
 			room_goto(rm_level_end);
@@ -44,27 +48,33 @@ switch(state){
 		break;
 		
 	case STATES.ENEMY_ROUND:
+		//have all the enemies take turn to deal damage to the player
 		if(attack_timer == 0){
 			//show_debug_message("Enemy ATTACK!");
 			var _enemy_count = ds_list_size(enemies);
+			//when still have enemy that have not attack the player
 			if(_enemy_count > 0){
 				var _enemy = ds_list_find_value(enemies, ds_list_size(enemies) - 1);
+				//put that enemy into attacking list
 				ds_list_delete(enemies, ds_list_size(enemies) - 1);
 				ds_list_add(attacking, _enemy);
 				_enemy.target_y = 352 + 20;
+				//deal damage
 				current_health -= _enemy.attack_point;
 				audio_play_sound(snd_enemy, 1, false);
 			}
 			else{
 				var _attacked_count = ds_list_size(attacking);
+				//set the attacked enemy to the final list
 				if(_attacked_count > 0){
-					show_debug_message("lalalalalal");
+					//show_debug_message("lalalalalal");
 					var _enemy = ds_list_find_value(attacking, ds_list_size(attacking) - 1);
 					ds_list_delete(attacking, ds_list_size(attacking) - 1);
 					ds_list_add(attacked, _enemy);
 					_enemy.target_y = 352 - 20;
 				}
 				else{
+					//return all enemy to original list
 					for(var _i = 0; _i < ds_list_size(attacked); _i++){
 						ds_list_add(enemies, ds_list_find_value(attacked, _i))
 					}

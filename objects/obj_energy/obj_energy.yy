@@ -8,8 +8,8 @@
   "name":"obj_energy",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"UI_Botton",
+    "path":"folders/Objects/UI_Botton.yy",
   },
   "parentObjectId":null,
   "persistent":false,

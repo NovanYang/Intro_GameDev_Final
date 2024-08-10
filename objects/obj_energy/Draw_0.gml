@@ -1,5 +1,6 @@
 draw_self();
 draw_set_font(fnt_energy);
+//draw out the current energy
 if(obj_game_manager.current_energy > 0){
 	draw_set_color(c_yellow);
 }

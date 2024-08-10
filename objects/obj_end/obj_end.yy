@@ -9,8 +9,8 @@
   "name":"obj_end",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"UI_Text",
+    "path":"folders/Objects/UI_Text.yy",
   },
   "parentObjectId":null,
   "persistent":false,
