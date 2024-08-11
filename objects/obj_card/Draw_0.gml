@@ -30,13 +30,19 @@ if(abs(y - target_y) > 1) {
 //draw the card to the target depth (this is for staggered effects)
 //depth = target_depth;
 
-//show the card's face based on its index
-if(face_index == 0) sprite_index = spr_fireball;
-if(face_index == 1) sprite_index = spr_blizzard;
-if(face_index == 2) sprite_index = spr_kunai;
 
-//BUT if the card is face up, just show the card back
-if(!face_up) sprite_index = spr_back;
+//show the card's face based on its index
+if(face_up) {
+    if(face_index == 0) sprite_index = spr_fireball;
+    if(face_index == 1) sprite_index = spr_blizzard;
+    if(face_index == 2) sprite_index = spr_kunai;
+    image_speed = 1;
+} else {
+    //BUT if the card is face up, just show the card back
+    sprite_index = spr_back_new;
+    image_speed = 3;
+}
+
 
 
 //draw the card
