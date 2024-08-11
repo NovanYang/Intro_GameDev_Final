@@ -62,7 +62,7 @@ switch(state) {
 			var _spell = ds_list_find_value(selected, 0);
 			var _enough_energy = false;
 			//check for energy use and deal damage if has enough energy
-			if(_spell.sprite_index == spr_blizzard){
+			if(_spell.sprite_index == spr_blizzard_new){
 				if(obj_game_manager.current_energy >= 3){
 					_enough_energy = true;
 					obj_game_manager.current_energy -= 3;
@@ -72,7 +72,7 @@ switch(state) {
 					audio_play_sound(snd_frost, 1, false);
 				}
 			}
-			else if(_spell.sprite_index == spr_fireball){
+			else if(_spell.sprite_index == spr_fireball_new){
 				if(obj_game_manager.current_energy >= 2){
 					_enough_energy = true;
 					obj_game_manager.current_energy -= 2;
@@ -80,7 +80,7 @@ switch(state) {
 					audio_play_sound(snd_fire, 1, false);
 				}
 			}
-			else if(_spell.sprite_index == spr_kunai){
+			else if(_spell.sprite_index == spr_kunai_new){
 				if(obj_game_manager.current_energy >= 1){
 					_enough_energy = true;
 					obj_game_manager.current_energy -= 1;

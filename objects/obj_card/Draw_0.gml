@@ -33,9 +33,9 @@ if(abs(y - target_y) > 1) {
 
 //show the card's face based on its index
 if(face_up) {
-    if(face_index == 0) sprite_index = spr_fireball;
+    if(face_index == 0) sprite_index = spr_fireball_new;
     if(face_index == 1) sprite_index = spr_blizzard_new;
-    if(face_index == 2) sprite_index = spr_kunai;
+    if(face_index == 2) sprite_index = spr_kunai_new;
     image_speed = 1;
 } else {
     //BUT if the card is face up, just show the card back
