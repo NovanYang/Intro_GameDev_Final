@@ -16,3 +16,5 @@ attacked = ds_list_create();
 state = STATES.LEVEL_START;
 
 attack_timer = 0;
+
+audio_play_sound(snd_bgm_by_Novan_Yang_and_Ethan_Meng, 2, true);

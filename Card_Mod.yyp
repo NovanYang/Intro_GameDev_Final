@@ -65,6 +65,7 @@
     {"id":{"name":"rm_level_end","path":"rooms/rm_level_end/rm_level_end.yy",},},
     {"id":{"name":"rm_level_start","path":"rooms/rm_level_start/rm_level_start.yy",},},
     {"id":{"name":"global_variable","path":"scripts/global_variable/global_variable.yy",},},
+    {"id":{"name":"snd_bgm_by_Novan_Yang_and_Ethan_Meng","path":"sounds/snd_bgm_by_Novan_Yang_and_Ethan_Meng/snd_bgm_by_Novan_Yang_and_Ethan_Meng.yy",},},
     {"id":{"name":"snd_enemy","path":"sounds/snd_enemy/snd_enemy.yy",},},
     {"id":{"name":"snd_fire","path":"sounds/snd_fire/snd_fire.yy",},},
     {"id":{"name":"snd_frost","path":"sounds/snd_frost/snd_frost.yy",},},
