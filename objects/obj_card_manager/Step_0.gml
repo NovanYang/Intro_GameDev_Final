@@ -103,6 +103,7 @@ switch(state) {
 				ds_list_add(discard, _spell);
 				state = CARD_STATES.ACTION;
 				audio_play_sound(snd_move, 1, false);
+				instance_create_depth(_target.x, _target.y, -2000, obj_enemy_hit_effect);
 			}
 			else{
 				//Add a new UI indicate the Lack of energy

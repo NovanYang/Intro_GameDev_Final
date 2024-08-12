@@ -44,6 +44,7 @@ slot = ds_list_create();
 for(var _i = 0; _i < num_cards; _i++){
 	//make a card
 	var _new_card = instance_create_layer(x, y, "Instances", obj_card);
+	_new_card.description = "";
 	_new_card.face_index = _i % 3;
 	_new_card.face_up = false;
 	_new_card.in_player_hand = false;

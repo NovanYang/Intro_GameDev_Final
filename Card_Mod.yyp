@@ -44,6 +44,7 @@
   },
   "name":"Card_Mod",
   "resources":[
+    {"id":{"name":"fnt_description","path":"fonts/fnt_description/fnt_description.yy",},},
     {"id":{"name":"fnt_enemy","path":"fonts/fnt_enemy/fnt_enemy.yy",},},
     {"id":{"name":"fnt_energy","path":"fonts/fnt_energy/fnt_energy.yy",},},
     {"id":{"name":"fnt_level_ui","path":"fonts/fnt_level_ui/fnt_level_ui.yy",},},
@@ -52,6 +53,7 @@
     {"id":{"name":"obj_card","path":"objects/obj_card/obj_card.yy",},},
     {"id":{"name":"obj_end_try","path":"objects/obj_end_try/obj_end_try.yy",},},
     {"id":{"name":"obj_end","path":"objects/obj_end/obj_end.yy",},},
+    {"id":{"name":"obj_enemy_hit_effect","path":"objects/obj_enemy_hit_effect/obj_enemy_hit_effect.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_energy","path":"objects/obj_energy/obj_energy.yy",},},
     {"id":{"name":"obj_game_manager","path":"objects/obj_game_manager/obj_game_manager.yy",},},
@@ -79,6 +81,7 @@
     {"id":{"name":"spr_card_lock","path":"sprites/spr_card_lock/spr_card_lock.yy",},},
     {"id":{"name":"spr_cencel","path":"sprites/spr_cencel/spr_cencel.yy",},},
     {"id":{"name":"spr_enemy_died","path":"sprites/spr_enemy_died/spr_enemy_died.yy",},},
+    {"id":{"name":"spr_enemy_hit","path":"sprites/spr_enemy_hit/spr_enemy_hit.yy",},},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
     {"id":{"name":"spr_energy","path":"sprites/spr_energy/spr_energy.yy",},},
     {"id":{"name":"spr_fireball_new","path":"sprites/spr_fireball_new/spr_fireball_new.yy",},},
