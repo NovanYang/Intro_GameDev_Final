@@ -62,6 +62,7 @@ switch(state){
 				//deal damage
 				current_health -= _enemy.attack_point;
 				audio_play_sound(snd_enemy, 1, false);
+				instance_create_depth(x, y, -2000, obj_player_hit_effect);
 			}
 			else{
 				var _attacked_count = ds_list_size(attacking);

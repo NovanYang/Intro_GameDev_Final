@@ -13,7 +13,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"UI_Botton",
-    "path":"folders/Objects/UI_Botton.yy",
+    "path":"folders/Objects/UI/UI_Botton.yy",
   },
   "parentObjectId":null,
   "persistent":false,

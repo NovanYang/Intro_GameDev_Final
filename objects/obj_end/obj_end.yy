@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"UI_Text",
-    "path":"folders/Objects/UI_Text.yy",
+    "path":"folders/Objects/UI/UI_Text.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -19,7 +19,7 @@ switch(state) {
 				//card roperties change
                 _dealt_card.in_player_hand = true;
                 _dealt_card.target_x = room_width / 3 + _player_num * hand_x_offset;
-                _dealt_card.target_y = room_height * 0.8;
+                _dealt_card.target_y = room_height * 0.85;
 				audio_play_sound(snd_move, 1, false);
             }
 			else{
