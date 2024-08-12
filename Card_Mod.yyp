@@ -81,6 +81,7 @@
     {"id":{"name":"spr_card_loc","path":"sprites/spr_card_loc/spr_card_loc.yy",},},
     {"id":{"name":"spr_card_lock","path":"sprites/spr_card_lock/spr_card_lock.yy",},},
     {"id":{"name":"spr_cencel","path":"sprites/spr_cencel/spr_cencel.yy",},},
+    {"id":{"name":"spr_deck","path":"sprites/spr_deck/spr_deck.yy",},},
     {"id":{"name":"spr_enemy_died","path":"sprites/spr_enemy_died/spr_enemy_died.yy",},},
     {"id":{"name":"spr_enemy_hit","path":"sprites/spr_enemy_hit/spr_enemy_hit.yy",},},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
