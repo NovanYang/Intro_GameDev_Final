@@ -43,6 +43,7 @@ switch(state){
 	//if all enemies killed in player's round, game win (might need to change that for dot mechanics)
 	case STATES.PLAYER_ROUND:
 		if(ds_list_size(enemies) == 0){
+			audio_stop_all();
 			room_goto(rm_level_end);
 		}
 		break;
@@ -92,6 +93,7 @@ switch(state){
 			}
 		}
 		if(current_health <= 0){
+			audio_stop_all();
 			room_goto(rm_level_start);
 		}
 		break;
