@@ -68,6 +68,7 @@ switch(state) {
 					obj_game_manager.current_energy -= 3;
 					with(obj_enemy){
 						health_point -= 2;
+						instance_create_depth(x, y, -2000, obj_enemy_hit_effect);
 					}
 					audio_play_sound(snd_frost, 1, false);
 				}
@@ -76,8 +77,13 @@ switch(state) {
 				if(obj_game_manager.current_energy >= 2){
 					_enough_energy = true;
 					obj_game_manager.current_energy -= 2;
-					_target.health_point -= 3;
+					//_target.health_point -= 3;
 					audio_play_sound(snd_fire, 1, false);
+					//instance_create_depth(_target.x, _target.y, -2000, obj_enemy_hit_effect);
+					var _fireball_bullet = instance_create_depth(_spell.x, _spell.y, -2000, obj_fireball_bullet);
+					_fireball_bullet.speed = 10;
+					_fireball_bullet.direction = point_direction(_spell.x, _spell.y, _target.x, _target.y);
+					_fireball_bullet.image_angle = _fireball_bullet.direction;
 				}
 			}
 			else if(_spell.sprite_index == spr_kunai_new){
@@ -86,6 +92,7 @@ switch(state) {
 					obj_game_manager.current_energy -= 1;
 					_target.health_point -= 1;
 					audio_play_sound(snd_kunai, 1, false);
+					instance_create_depth(_target.x, _target.y, -2000, obj_enemy_hit_effect);
 				}
 			}
 			
@@ -103,7 +110,6 @@ switch(state) {
 				ds_list_add(discard, _spell);
 				state = CARD_STATES.ATTACK_DISPLAY;
 				audio_play_sound(snd_move, 1, false);
-				instance_create_depth(_target.x, _target.y, -2000, obj_enemy_hit_effect);
 			}
 			else{
 				//Add a new UI indicate the Lack of energy
