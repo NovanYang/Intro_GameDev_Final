@@ -95,13 +95,13 @@ switch(state) {
 				_spell.lock = false;
 				_spell.discard = true;
 				//set to the discard location and depth
-				_spell.target_y = y - 2 * discard_track;
-				_spell.target_x = 0.9 * room_width;
+				_spell.target_y = _spell.y - 20;
+				_spell.target_x = _spell.x;
 				_spell.target_depth = num_cards - discard_track;
 				discard_track += 1;
 				//add to discard list
 				ds_list_add(discard, _spell);
-				state = CARD_STATES.ACTION;
+				state = CARD_STATES.ATTACK_DISPLAY;
 				audio_play_sound(snd_move, 1, false);
 				instance_create_depth(_target.x, _target.y, -2000, obj_enemy_hit_effect);
 			}
@@ -198,6 +198,17 @@ switch(state) {
 			else{
 				state = CARD_STATES.INITIAL;
 			}
+		}
+		break;
+	
+	case CARD_STATES.ATTACK_DISPLAY:
+		var _attacked_card = ds_list_find_value(discard, ds_list_size(discard) - 1);
+		shuffle_timer ++;
+		if(shuffle_timer > 60){
+			_attacked_card.target_y =  y - 2 * discard_track;
+			_attacked_card.target_x = 0.9 * room_width;
+			shuffle_timer = 0;
+			state = CARD_STATES.ACTION;
 		}
 		break;
 }

@@ -15,7 +15,8 @@ enum CARD_STATES{
 	CLEAN_UP,
 	SHUFFLE,
 	RESTART,
-	ATTACK
+	ATTACK,
+	ATTACK_DISPLAY
 }
 
 //set the initial state to opponent deal
