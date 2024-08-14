@@ -32,6 +32,11 @@ switch(state) {
 	
 	//change the property of card of face up to true
 	case CARD_STATES.REVEAL:
+		var _new_level_ui = instance_create_layer(room_width/2, room_height/2, "Instances", obj_ui);
+		_new_level_ui.ui_type = "LEVEL_START";
+		_new_level_ui.ui_message = "YOUR ROUND";
+		_new_level_ui.appear_duration = 30;
+		_new_level_ui.permanant = false;
 		if(move_timer == 0){
 			//change all cards in the hands list
 			for(var _i = 0; _i < ds_list_size(player_hand); _i++){
@@ -91,9 +96,13 @@ switch(state) {
 				if(obj_game_manager.current_energy >= 1){
 					_enough_energy = true;
 					obj_game_manager.current_energy -= 1;
-					_target.health_point -= 1;
+					//_target.health_point -= 1;
 					audio_play_sound(snd_kunai, 1, false);
-					instance_create_depth(_target.x, _target.y, -2000, obj_enemy_hit_effect);
+					//instance_create_depth(_target.x, _target.y, -2000, obj_enemy_hit_effect);
+					var _kunai_bullet = instance_create_depth(_spell.x, _spell.y, -2000, obj_kunai_bullet);
+					_kunai_bullet.speed = 15;
+					_kunai_bullet.direction = point_direction(_spell.x, _spell.y, _target.x, _target.y);
+					_kunai_bullet.image_angle = _kunai_bullet.direction;
 				}
 			}
 			

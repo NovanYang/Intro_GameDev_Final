@@ -1,4 +1,4 @@
-show_debug_message(ds_list_size(enemies));
+//show_debug_message(ds_list_size(enemies));
 switch(state){
 	//when the level just start
 	case STATES.LEVEL_START:
@@ -6,7 +6,7 @@ switch(state){
 		var _new_level_ui = instance_create_layer(room_width/2, room_height/2, "Instances", obj_ui);
 		_new_level_ui.ui_type = "LEVEL_START";
 		_new_level_ui.ui_message = "LEVEL " + string(level);
-		_new_level_ui.appear_duration = 100;
+		_new_level_ui.appear_duration = 60;
 		_new_level_ui.permanant = false;
 		state = STATES.ENEMY_GENERATE;
 		break;
@@ -32,6 +32,32 @@ switch(state){
 			_enemy_two.died = false;
 			ds_list_add(enemies, _enemy_two);
 		}
+		else if(room == rm_level_2){
+			//three enemies created in LEVEL 1
+			var _enemy_one = instance_create_layer(224, -100, "Instances", obj_enemy);
+			_enemy_one.attack_point = 1;
+			_enemy_one.health_point = 3;
+			_enemy_one.target_x = 184;
+			_enemy_one.target_y = 352;
+			_enemy_one.died = false;
+			ds_list_add(enemies, _enemy_one);
+			
+			var _enemy_two = instance_create_layer(384, -100, "Instances", obj_enemy);
+			_enemy_two.attack_point = 3;
+			_enemy_two.health_point = 2;
+			_enemy_two.target_x = 304;
+			_enemy_two.target_y = 352;
+			_enemy_two.died = false;
+			ds_list_add(enemies, _enemy_two);
+			
+			var _enemy_three = instance_create_layer(384, -100, "Instances", obj_enemy);
+			_enemy_three.attack_point = 2;
+			_enemy_three.health_point = 4;
+			_enemy_three.target_x = 424;
+			_enemy_three.target_y = 352;
+			_enemy_three.died = false;
+			ds_list_add(enemies, _enemy_three);
+		}
 		state = STATES.PLAYER_ROUND_INITIAL;
 		break;
 	
@@ -43,8 +69,14 @@ switch(state){
 	//if all enemies killed in player's round, game win (might need to change that for dot mechanics)
 	case STATES.PLAYER_ROUND:
 		if(ds_list_size(enemies) == 0){
-			audio_stop_all();
-			room_goto(rm_level_end);
+			if(room == rm_level_1){
+				audio_stop_all();
+				room_goto(rm_level_2);
+			}
+			else if(room == rm_level_2){
+				audio_stop_all();
+				room_goto(rm_level_end);
+			}
 		}
 		break;
 		
@@ -94,7 +126,7 @@ switch(state){
 		}
 		if(current_health <= 0){
 			audio_stop_all();
-			room_goto(rm_level_start);
+			room_goto(rm_level_fail);
 		}
 		break;
 		

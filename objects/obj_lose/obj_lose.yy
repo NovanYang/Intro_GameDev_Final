@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_end",
+  "%Name":"obj_lose",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_end",
+  "name":"obj_lose",
   "overriddenProperties":[],
   "parent":{
     "name":"UI_Text",
