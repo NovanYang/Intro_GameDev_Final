@@ -68,8 +68,9 @@ switch(state) {
 					obj_game_manager.current_energy -= 3;
 					with(obj_enemy){
 						health_point -= 2;
-						instance_create_depth(x, y, -2000, obj_enemy_hit_effect);
+						//instance_create_depth(x, y, -2000, obj_enemy_hit_effect);
 					}
+					instance_create_depth(0, 128, -2000, obj_blizzard_effect);
 					audio_play_sound(snd_frost, 1, false);
 				}
 			}
