@@ -5,6 +5,7 @@ if(sprite_index == spr_enemy_died){
 			ds_list_delete(obj_game_manager.enemies, _i);
 		}
 	}
+	audio_play_sound(snd_enemy_died, 1, false);
 	instance_destroy(id);
 }
 

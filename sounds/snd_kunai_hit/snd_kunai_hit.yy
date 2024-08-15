@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_frost",
+  "%Name":"snd_kunai_hit",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.47542,
-  "name":"snd_frost",
+  "duration":0.115011,
+  "name":"snd_kunai_hit",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_frost.wav",
+  "soundFile":"snd_kunai_hit.wav",
   "type":0,
   "volume":1.0,
 }
